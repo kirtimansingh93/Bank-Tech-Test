@@ -46,7 +46,7 @@ PLATFORMS
 DEPENDENCIES
   rspec
   rubocop (~> 0.59.0)
-  simplecov (~> 0.12.0)
+  simplecov
 
 BUNDLED WITH
    1.16.3
