@@ -36,7 +36,7 @@
 `exit`
 
 
-####User stories:
+## User stories:
 ```
 As a customer,
 So that I can store my money,
