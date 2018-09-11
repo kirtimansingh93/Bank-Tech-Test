@@ -2,71 +2,71 @@
 
 
 #### 1. Open your terminal and clone the repository.
-  `git clone https://github.com/kirtimansingh93/bank-tech-test`
+        `git clone https://github.com/kirtimansingh93/bank-tech-test`
 
 #### 2. Install gemfiles: rspec(testing), SimpleCov(testing coverage) and rubocop(formatting errors).
-  `bundle install`
+        `bundle install`
 
 #### 3. Run IRB.
-  `irb`
+        `irb`
 
 #### 4. Require file you wish to use.
-  `require './lib/bank.rb'`
+        `require './lib/bank.rb'`
 
 #### 5. Initialize a bank account.
-  `account = Bank.new`
+        `account = Bank.new`
 
 #### 6. Deposit/Withdraw an amount.
-  * To deposit/credit : `account.deposit(amount)`
-  * To withdraw/debit : `account.withdraw(amount)`
+      * To deposit/credit : `account.deposit(amount)`
+      * To withdraw/debit : `account.withdraw(amount)`
 
 #### 7. View your transactions.
-  `account.transactions`
+        `account.transactions`
 
 #### 8. View your balance.
-  `account.balance`
+        `account.balance`
 
 #### 8. Print statement.
-  `account.statement`
+        `account.statement`
 
 #### 10. View tests and test coverage.
-  `rspec`
+        `rspec`
 
 #### 11. When finished, exit IRB
-  `exit`
+        `exit`
 
 
 ## User stories:
-  ```
-  As a customer,
-  So that I can store my money,
-  I would like to open a bank account .
-  ```
-  ```
-  As a customer,
-  So that I can add money into my account,
-  I would like to be able to make deposits.
-  ```
-  ```
-  As a customer,
-  So that I can take out money from my account,
-  I would like to be able to make withdrawals.
-  ```
-  ```
-  As a customer,
-  So that I can see my transaction history,
-  I would like to be able view my transactions.
-  ```
-  ```
-  As a customer,
-  So that I check how much money I have,
-  I would like to be able to view my balance.
-  ```
-  ```
-  As a customer,
-  So that I can see my check the cashflow in and out of my account,
-  I would like to be able print a statement.
-  ```
+    ```
+    As a customer,
+    So that I can store my money,
+    I would like to open a bank account .
+    ```
+    ```
+    As a customer,
+    So that I can add money into my account,
+    I would like to be able to make deposits.
+    ```
+    ```
+    As a customer,
+    So that I can take out money from my account,
+    I would like to be able to make withdrawals.
+    ```
+    ```
+    As a customer,
+    So that I can see my transaction history,
+    I would like to be able view my transactions.
+    ```
+    ```
+    As a customer,
+    So that I check how much money I have,
+    I would like to be able to view my balance.
+    ```
+    ```
+    As a customer,
+    So that I can see my check the cashflow in and out of my account,
+    I would like to be able print a statement.
+    ```
 
 ## Specification
 
