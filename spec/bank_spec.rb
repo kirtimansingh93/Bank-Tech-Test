@@ -17,7 +17,7 @@ describe Bank do
         expect(subject.balance).to eq(2000)
       end
       it 'cannot credit a negative amount' do
-        expect { subject.deposit(-10) }.to raise_error 'Cannot credit a nil or a negative amount'
+        expect { subject.deposit(-10) }.to raise_error 'Cannot deposit a nil or a negative amount.'
       end
     end
 
@@ -32,6 +32,10 @@ describe Bank do
       it 'cannot withdraw if debit amount is more than balance' do
         expect { subject.withdraw(100) }.to raise_error 'Insufficient Funds'
       end
+
+      it 'cannot withdraw a negative amount' do
+        expect { subject.withdraw(-10) }.to raise_error 'Cannot withdraw a nil or a negative amount.'
+      end
     end
 
     describe ':transactions' do
@@ -41,7 +45,7 @@ describe Bank do
       it 'can show transaction history' do
         subject.deposit(3000)
         subject.withdraw(500)
-        expect(subject.transactions).to include({ date: Time.now.strftime("%d/%m/%Y"),
+        expect(account.transactions).to include({ date: Time.now.strftime("%d/%m/%Y"),
         credit: "3000.00", debit: nil, balance: "3000.00" }, { date: Time.now.strftime("%d/%m/%Y"),
         credit: nil, debit: "500.00", balance: "2500.00" })
       end

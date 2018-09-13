@@ -1,40 +1,24 @@
 # Bank Tech Test
 
 
-#### 1. Open your terminal and clone the repository.
+####  Open your terminal and clone the repository.
         `git clone https://github.com/kirtimansingh93/bank-tech-test`
 
-#### 2. Install gemfiles: rspec(testing), SimpleCov(testing coverage) and rubocop(formatting errors).
+####  Install gemfiles: rspec(testing), SimpleCov(testing coverage) and rubocop(formatting errors).
         `bundle install`
 
-#### 3. Run IRB.
+####   How to use the program
         `irb`
-
-#### 4. Require file you wish to use.
         `require './lib/bank.rb'`
-
-#### 5. Initialize a bank account.
         `account = Bank.new`
-
-#### 6. Deposit/Withdraw an amount.
-      * To deposit/credit : `account.deposit(amount)`
-      * To withdraw/debit : `account.withdraw(amount)`
-
-#### 7. View your transactions.
-        `account.transactions`
-
-#### 8. View your balance.
+        `account.deposit(amount)`
+        `account.withdraw(amount)`
         `account.balance`
-
-#### 8. Print statement.
         `account.statement`
-
-#### 10. View tests and test coverage.
-        `rspec`
-
-#### 11. When finished, exit IRB
         `exit`
 
+####   View tests and test coverage.
+        `rspec        
 
 ## User stories:
     ```
@@ -51,11 +35,6 @@
     As a customer,
     So that I can take out money from my account,
     I would like to be able to make withdrawals.
-    ```
-    ```
-    As a customer,
-    So that I can see my transaction history,
-    I would like to be able view my transactions.
     ```
     ```
     As a customer,
