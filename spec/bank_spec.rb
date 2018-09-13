@@ -51,10 +51,10 @@ describe Bank do
       end
     end
 
-    describe "#statement" do
-      it 'statement shows date, credit amount, debit amount and balance' do
-        subject.deposit(3000)
-        expect { subject.statement }.to output("date || credit || debit || balance \n#{Time.now.strftime('%d/%m/%Y')} || 3000.00 ||  || 3000.00\n").to_stdout
+    describe "#bank_statement" do
+      it 'account receives bank_statement' do
+        expect(subject.statement).to receive(:print_statement)
+        subject.bank_statement
       end
     end
 
