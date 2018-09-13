@@ -2,17 +2,17 @@
 
 
 ####  Open your terminal and clone the repository.
-      ```
+
       git clone https://github.com/kirtimansingh93/bank-tech-test
-      ```
+
 
 ####  Install gemfiles: rspec(testing), SimpleCov(testing coverage) and rubocop(formatting errors).
-      ```
+
       bundle install
-      ```
+
 
 ####   How to use the program
-      ```
+
       irb
       require './lib/bank.rb'
       account = Bank.new
@@ -21,16 +21,16 @@
       account.balance
       account.statement
       exit
-      ```
+
 
 ####   View tests and test coverage.
-      ```
+
       rspec
-      ```       
+
 
 ## User stories:
 
-      ```
+
       As a customer,
       So that I can store my money,
       I would like to open a bank account .
@@ -50,7 +50,7 @@
       As a customer,
       So that I can see my check the cashflow in and out of my account,
       I would like to be able print a statement.
-      ```
+
 
 ## Specification
 
