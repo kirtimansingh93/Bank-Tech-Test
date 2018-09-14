@@ -1,7 +1,9 @@
 require 'bank'
+require 'statement'
 
 describe Bank do
   subject(:account) { described_class.new }
+  let(:mock_statement) {double :blah}
 
   describe 'Bank Account:' do
     describe ':balance' do
@@ -38,23 +40,11 @@ describe Bank do
       end
     end
 
-    describe ':transactions' do
-      it 'initially has no transactions' do
-        expect(subject.transactions).to be_empty
-      end
-      it 'can show transaction history' do
-        subject.deposit(3000)
-        subject.withdraw(500)
-        expect(account.transactions).to include({ date: Time.now.strftime("%d/%m/%Y"),
-        credit: "3000.00", debit: nil, balance: "3000.00" }, { date: Time.now.strftime("%d/%m/%Y"),
-        credit: nil, debit: "500.00", balance: "2500.00" })
-      end
-    end
-
     describe "#bank_statement" do
       it 'account receives bank_statement' do
-        expect(subject.statement).to receive(:print_statement)
-        subject.bank_statement
+        bank_with_mock_statement = Bank.new(mock_statement)
+        expect(mock_statement).to receive(:print_statement)
+        bank_with_mock_statement.bank_statement
       end
     end
 

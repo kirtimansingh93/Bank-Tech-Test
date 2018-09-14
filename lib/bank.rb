@@ -2,7 +2,7 @@ require 'date'
 require_relative 'statement'
 
 class Bank
-  attr_reader :balance, :transactions, :statement
+  attr_reader :balance
 
   def initialize(statement = Statement.new)
     @balance = 0
@@ -25,6 +25,6 @@ class Bank
   end
 
   def bank_statement
-    self.statement.print_statement(@transactions)
+    @statement.print_statement(@transactions)
   end
 end
