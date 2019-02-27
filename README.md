@@ -25,8 +25,10 @@
 
 * If you want to specify the date of the deposit or withdrawal, then you must type:
 
-account.deposit(amount, day, month, year)
-account.withdraw(amount, day, month, year)
+```
+    account.deposit(amount, day, month, year)
+    account.withdraw(amount, day, month, year)
+```
 
 ####   View tests and test coverage.
 
