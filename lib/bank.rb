@@ -10,18 +10,18 @@ class Bank
     @statement = statement
   end
 
-  def deposit(amount)
+  def deposit(amount, day = Time.now.strftime("%d"), month = Time.now.strftime("%m"), year = Time.now.strftime("%Y"))
     fail 'Cannot deposit a nil or a negative amount.' if amount <= 0
     @balance += amount
-    @transactions.push(date: Time.now.strftime("%d/%m/%Y"), credit: sprintf('%.2f', amount), debit: nil, balance: sprintf('%.2f', @balance))
+    @transactions.push(date: Time.now.strftime("#{day}/#{month}/#{year}"), credit: sprintf('%.2f', amount), debit: nil, balance: sprintf('%.2f', @balance))
   end
 
-  def withdraw(amount)
+  def withdraw(amount, day = Time.now.strftime("%d"), month = Time.now.strftime("%m"), year = Time.now.strftime("%Y"))
     fail 'Insufficient Funds' if amount > @balance
     fail 'Cannot withdraw a nil or a negative amount.' if amount <= 0
 
     @balance -= amount
-    @transactions.push(date: Time.now.strftime("%d/%m/%Y"), credit: nil, debit: sprintf('%.2f', amount), balance: sprintf('%.2f', @balance))
+    @transactions.push(date: Time.now.strftime("#{day}/#{month}/#{year}"), credit: nil, debit: sprintf('%.2f', amount), balance: sprintf('%.2f', @balance))
   end
 
   def bank_statement

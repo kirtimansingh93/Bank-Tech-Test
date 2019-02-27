@@ -13,15 +13,23 @@
 
 ####   How to use the program
 
+```
       irb
-      require './lib/bank.rb'
-      account = Bank.new
-      account.deposit(amount)
-      account.withdraw(amount)
-      account.balance
-      account.statement
+        require './lib/bank.rb'
+        account = Bank.new
+        account.deposit(amount)
+        account.withdraw(amount)
+        account.balance
+        account.bank_statement
       exit
+```
 
+* If you want to specify the date of the deposit or withdrawal, then you must type:
+
+```
+account.deposit(amount, day, month, year)
+account.withdraw(amount, day, month, year)
+```
 
 ####   View tests and test coverage.
 

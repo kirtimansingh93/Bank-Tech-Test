@@ -3,7 +3,7 @@ require 'statement'
 
 describe Bank do
   subject(:account) { described_class.new }
-  let(:mock_statement) {double :blah}
+  let(:mock_statement) {double :statement}
 
   describe 'Bank Account:' do
     describe ':balance' do
