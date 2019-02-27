@@ -3,7 +3,7 @@
 
 ####  Open your terminal and clone the repository.
 
-      git clone https://github.com/kirtimansingh93/bank-tech-test
+      git clone https://github.com/kirtimansingh93/Bank-Tech-Test
 
 
 ####  Install gemfiles: rspec(testing), SimpleCov(testing coverage) and rubocop(formatting errors).
